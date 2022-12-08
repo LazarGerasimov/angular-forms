@@ -1,10 +1,16 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appMyRouterLink]'
 })
 export class MyRouterLinkDirective {
 
-  constructor() { }
+  constructor(
+    private elementRef: ElementRef,
+    private renderer: Renderer2
+  ) {
+    this.renderer.setAttribute(this.elementRef.nativeElement, 'data-test', '123')
+   }
+
 
 }
