@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+
+  handleFormSubmit(value: {email: string; password: string}): void {
+    console.log(value);
+  }
 }
