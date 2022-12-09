@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { MaxCountDirective } from './max-count.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     MyRouterLinkDirective,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    MaxCountDirective
   ],
   imports: [
     BrowserModule,
