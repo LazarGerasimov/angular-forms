@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,12 @@ import { Component } from '@angular/core';
 export class LoginComponent {
 
 
-  handleFormSubmit(value: {email: string; password: string}): void {
+  handleFormSubmit(form: NgForm ): void {
+    if (form.invalid) {
+      return;
+    }
+    const value: {email: string; password: string;} = form.value;
+    form.setValue({email: '', password: ''});
     console.log(value);
   }
 }
