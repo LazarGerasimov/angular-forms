@@ -10,7 +10,9 @@
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input id="password" type="text" name="password" ngModel [appMaxCount]="5">
+        <input id="password" type="text" name="password" #passwordInput="ngModel" ngModel [appMaxCount]="5">
+        <div *ngIf="emailInput?.errors?.['appMaxCount']">Password is longer than {{emailInput?.errors?.['appMaxCount']}}</div> 
+
     </div>
     <button>Login</button>
 </form>
