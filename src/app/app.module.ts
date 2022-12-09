@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MyRouterLinkDirective } from './my-router-link.directive';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyRouterLinkDirective,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
