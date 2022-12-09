@@ -8,15 +8,15 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
-  @ViewChild('loginForm') loginForm!: NgForm;
+  @ViewChild('loginForm', { static: true }) loginForm!: NgForm;
 
 
-  handleFormSubmit(form: NgForm ): void {
+  handleFormSubmit(form: NgForm): void {
     if (form.invalid) {
       return;
     }
-    const value: {email: string; password: string;} = form.value;
-    form.setValue({email: '', password: ''});
+    const value: { email: string; password: string; } = form.value;
+    form.setValue({ email: '', password: '' });
     console.log(value);
   }
 }
