@@ -14,4 +14,8 @@ export class RegisterComponent {
   })
 
   constructor(private fb: FormBuilder) {}
+
+  handleFormSubmit() {
+    
+  }
 }
