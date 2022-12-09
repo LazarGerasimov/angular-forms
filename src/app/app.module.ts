@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaxCountDirective } from './max-count.directive';
+import { ReducePipe } from './reduce.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MaxCountDirective } from './max-count.directive';
     RegisterComponent,
     HomeComponent,
     MaxCountDirective,
+    ReducePipe,
   ],
   imports: [
     BrowserModule,
