@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule, // for template driven forms
     ReactiveFormsModule, // for in class forms that we have to bind in the template
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
