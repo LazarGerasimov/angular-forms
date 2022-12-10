@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaxCountDirective } from './max-count.directive';
 import { ReducePipe } from './reduce.pipe';
+import { appInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ReducePipe } from './reduce.pipe';
     FormsModule, // for template driven forms
     ReactiveFormsModule // for in class forms that we have to bind in the template
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
