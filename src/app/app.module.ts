@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaxCountDirective } from './max-count.directive';
 import { ReducePipe } from './reduce.pipe';
 import { appInterceptorProvider } from './app.interceptor';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { appInterceptorProvider } from './app.interceptor';
     BrowserModule,
     AppRoutingModule,
     FormsModule, // for template driven forms
-    ReactiveFormsModule // for in class forms that we have to bind in the template
+    ReactiveFormsModule, // for in class forms that we have to bind in the template
+    HttpClientModule
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
